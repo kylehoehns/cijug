@@ -150,7 +150,7 @@ export default function Component() {
                   >
                     <div className="absolute -inset-0.5 rounded-lg bg-gradient-to-r from-cijug-orange to-cijug-blue opacity-50 blur transition-all group-hover:opacity-75" />
                     <div className="relative flex flex-col items-center gap-4 rounded-lg border border-white/10 bg-gradient-to-r from-cijug-orange/10 to-cijug-blue/10 backdrop-blur-sm p-8 transition-all group-hover:scale-[1.01]">
-                      <div className="h-16 flex items-center bg-white rounded-lg p-4 w-full">
+                      <div className="h-16 flex items-center">
                         <Image
                           src={`${sponsor.logo}`}
                           alt={`${sponsor.name} Logo`}
