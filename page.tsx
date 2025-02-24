@@ -1,6 +1,7 @@
-import { Calendar, Users, Youtube, Twitter, Linkedin, ExternalLink, Mic2, Mail, Code2 } from "lucide-react"
+import { Calendar, Users, ExternalLink, Mic2, Mail, Code2 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { FaXTwitter, FaLinkedin, FaYoutube } from "react-icons/fa6";
 
 export default function Component() {
   return (
@@ -132,8 +133,8 @@ export default function Component() {
                     className="group relative"
                   >
                     <div className="absolute -inset-0.5 rounded-lg bg-gradient-to-r from-cijug-orange to-cijug-blue opacity-50 blur transition-all group-hover:opacity-75" />
-                    <div className="relative flex flex-col items-center gap-4 rounded-lg border border-white/10 bg-gradient-to-b from-white to-gray-100 p-6 transition-all">
-                      <div className="h-16 flex items-center">
+                    <div className="relative flex flex-col items-center gap-4 rounded-lg border border-white/10 bg-gradient-to-r from-cijug-orange/10 to-cijug-blue/10 backdrop-blur-sm p-8 transition-all group-hover:scale-[1.01]">
+                    <div className="h-16 flex items-center">
                         <Image
                           src={`${sponsor.logo}`}
                           alt={`${sponsor.name} Logo`}
@@ -142,7 +143,7 @@ export default function Component() {
                           className="h-16 w-auto object-contain transition-transform group-hover:scale-105"
                         />
                       </div>
-                      <span className="font-semibold text-lg text-black">{sponsor.name}</span>
+                      <span className="font-semibold text-lg text-white">{sponsor.name}</span>
                     </div>
                   </Link>
                 ))}
@@ -156,14 +157,29 @@ export default function Component() {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Connect with Us</h2>
                 <p className="max-w-[900px] text-gray-400 md:text-xl">
-                  Follow us for speaker announcements, event updates, and community discussions.
+                  Follow us on social media to stay updated with our latest events and discussions
                 </p>
               </div>
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-wrap justify-center gap-8">
                 {[
-                  { name: "X/Twitter", icon: Twitter, url: "https://twitter.com/cijug" },
-                  { name: "LinkedIn", icon: Linkedin, url: "https://www.linkedin.com/company/cijug/" },
-                  { name: "YouTube", icon: Youtube, url: "https://www.youtube.com/@CIJUG" },
+                  {
+                    name: "Twitter",
+                    icon: FaXTwitter,
+                    url: "https://twitter.com/cijug",
+                    hoverColor: "group-hover:text-cijug-orange",
+                  },
+                  {
+                    name: "LinkedIn",
+                    icon: FaLinkedin,
+                    url: "https://www.linkedin.com/groups/1857039/",
+                    hoverColor: "group-hover:text-cijug-blue",
+                  },
+                  {
+                    name: "YouTube",
+                    icon: FaYoutube,
+                    url: "https://www.youtube.com/@CIJUG",
+                    hoverColor: "group-hover:text-cijug-orange",
+                  },
                 ].map((social) => (
                   <Link
                     key={social.name}
@@ -171,11 +187,18 @@ export default function Component() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group relative"
+                    aria-label={social.name}
                   >
-                    <div className="absolute -inset-0.5 rounded-md bg-gradient-to-r from-cijug-orange to-cijug-blue opacity-50 blur transition-all group-hover:opacity-75" />
-                    <div className="relative inline-flex h-10 items-center justify-center rounded-md border border-white/10 bg-black px-8 text-sm font-medium transition-all group-hover:bg-black/50">
-                      <social.icon className="mr-2 h-4 w-4" />
-                      {social.name}
+                    <div className="relative flex items-center justify-center">
+                      {/* Outer ring with gradient */}
+                      <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cijug-orange to-cijug-blue opacity-0 group-hover:opacity-100 transition-all duration-300" />
+                      {/* Inner container */}
+                      <div className="relative flex h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-black transition-all duration-300 group-hover:scale-110">
+                        {/* Icon */}
+                        <social.icon className={`h-6 w-6 transition-all duration-300 ${social.hoverColor}`} />
+                        {/* Subtle pulse animation */}
+                        <div className="absolute inset-0 rounded-full border border-white/5 group-hover:animate-ping opacity-0 group-hover:opacity-100" />
+                      </div>
                     </div>
                   </Link>
                 ))}
