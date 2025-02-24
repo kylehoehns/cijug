@@ -16,7 +16,7 @@ export default function Component() {
                 <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-cijug-orange to-cijug-blue opacity-75 blur" />
                 <div className="relative bg-black rounded-xl p-4">
                   <Image
-                    src="/logos/cijug.png"
+                    src="/cijug/logos/cijug.png"
                     alt="CIJUG Logo"
                     width={300}
                     height={120}
@@ -121,8 +121,8 @@ export default function Component() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-center">
                 {[
-                  { name: "Source Allies", url: "https://www.sourceallies.com/", logo: "/logos/source-allies.png?height=64&width=200" },
-                  { name: "No Fluff Just Stuff", url: "https://nofluffjuststuff.com/", logo: "/logos/nfjs.png?height=64&width=200" },
+                  { name: "Source Allies", url: "https://www.sourceallies.com/", logo: "/cijug/logos/source-allies.png?height=64&width=200" },
+                  { name: "No Fluff Just Stuff", url: "https://nofluffjuststuff.com/", logo: "/cijug/logos/nfjs.png?height=64&width=200" },
                   { name: "JetBrains", url: "https://www.jetbrains.com/", logo: "https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains.png?height=64&width=200" },
                 ].map((sponsor) => (
                   <Link
