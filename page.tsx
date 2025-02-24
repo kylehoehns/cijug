@@ -1,7 +1,7 @@
-import { Calendar, Users, ExternalLink, Mic2, Mail, Code2 } from "lucide-react"
+import { Calendar, Users, ExternalLink, Mic2, Mail, Code2 } from 'lucide-react'
 import Image from "next/image"
 import Link from "next/link"
-import { FaXTwitter, FaLinkedin, FaYoutube } from "react-icons/fa6";
+import { FaXTwitter, FaLinkedin, FaYoutube } from "react-icons/fa6"
 
 export default function Component() {
   return (
@@ -29,8 +29,9 @@ export default function Component() {
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
                   Central Iowa Java Users Group
                 </h1>
-                <p className="max-w-[900px] text-gray-400 md:text-xl/relaxed lg:text-2xl/relaxed">
-                  Expand Your Java Expertise with CIJUG. Whether you're just starting or an experienced developer, our community is here to help you connect, learn, and thrive.
+                <p className="max-w-[900px] text-gray-300 md:text-xl/relaxed lg:text-2xl/relaxed">
+                  Expand Your Java Expertise with CIJUG. Whether you're just starting or an experienced developer, our
+                  community is here to help you connect, learn, and thrive.
                 </p>
               </div>
               <div className="flex flex-wrap gap-4 justify-center">
@@ -70,8 +71,11 @@ export default function Component() {
                 <div className="absolute -inset-4 rounded-xl bg-gradient-to-r from-cijug-blue to-cijug-orange opacity-10 blur-xl" />
                 <div className="relative">
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">About CIJUG</h2>
-                  <p className="mt-4 text-gray-400 md:text-xl">
-                    At CIJUG, we’re more than a meetup—we’re a thriving network of Java and software engineering enthusiasts. We explore new technologies, share real-world insights, and support continuous learning. Whether you're just starting or an expert in the field, CIJUG is the place to connect, grow, and share your passion!
+                  <p className="mt-4 text-gray-300 md:text-xl">
+                    At CIJUG, we're more than a meetup—we're a thriving network of Java and software engineering
+                    enthusiasts. We explore new technologies, share real-world insights, and support continuous learning.
+                    Whether you're just starting or an expert in the field, CIJUG is the place to connect, grow, and
+                    share your passion!
                   </p>
                 </div>
               </div>
@@ -82,7 +86,7 @@ export default function Component() {
                     <Calendar className="h-6 w-6 mt-1 text-cijug-orange" />
                     <div>
                       <h3 className="font-bold text-white">Regular Meetups</h3>
-                      <p className="text-gray-400">Monthly gatherings with expert presentations and discussions</p>
+                      <p className="text-gray-300">Monthly gatherings with expert presentations and discussions</p>
                     </div>
                   </div>
                 </div>
@@ -92,7 +96,7 @@ export default function Component() {
                     <Users className="h-6 w-6 mt-1 text-cijug-blue" />
                     <div>
                       <h3 className="font-bold text-white">Community Driven</h3>
-                      <p className="text-gray-400">Connect with local developers and industry professionals</p>
+                      <p className="text-gray-300">Connect with local developers and industry professionals</p>
                     </div>
                   </div>
                 </div>
@@ -102,7 +106,7 @@ export default function Component() {
                     <Code2 className="h-6 w-6 mt-1 text-white" />
                     <div>
                       <h3 className="font-bold text-white">Tech Focus</h3>
-                      <p className="text-gray-400">Deep dives into Java, JVM, and broader tech ecosystem</p>
+                      <p className="text-gray-300">Deep dives into Java, JVM, and broader tech ecosystem</p>
                     </div>
                   </div>
                 </div>
@@ -115,15 +119,27 @@ export default function Component() {
             <div className="flex flex-col items-center justify-center space-y-8 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Our Sponsors</h2>
-                <p className="max-w-[900px] text-gray-400 md:text-xl">
+                <p className="max-w-[900px] text-gray-300 md:text-xl">
                   Thank you to our amazing sponsors who help make our community possible
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-center">
                 {[
-                  { name: "Source Allies", url: "https://www.sourceallies.com/", logo: "/cijug/logos/source-allies.png?height=64&width=200" },
-                  { name: "No Fluff Just Stuff", url: "https://nofluffjuststuff.com/", logo: "/cijug/logos/nfjs.png?height=64&width=200" },
-                  { name: "JetBrains", url: "https://www.jetbrains.com/", logo: "https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains.png?height=64&width=200" },
+                  {
+                    name: "Source Allies",
+                    url: "https://www.sourceallies.com/",
+                    logo: "/cijug/logos/source-allies.png?height=64&width=200",
+                  },
+                  {
+                    name: "No Fluff Just Stuff",
+                    url: "https://nofluffjuststuff.com/",
+                    logo: "/cijug/logos/nfjs.png?height=64&width=200",
+                  },
+                  {
+                    name: "JetBrains",
+                    url: "https://www.jetbrains.com/",
+                    logo: "https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains.png?height=64&width=200",
+                  },
                 ].map((sponsor) => (
                   <Link
                     key={sponsor.name}
@@ -134,7 +150,7 @@ export default function Component() {
                   >
                     <div className="absolute -inset-0.5 rounded-lg bg-gradient-to-r from-cijug-orange to-cijug-blue opacity-50 blur transition-all group-hover:opacity-75" />
                     <div className="relative flex flex-col items-center gap-4 rounded-lg border border-white/10 bg-gradient-to-r from-cijug-orange/10 to-cijug-blue/10 backdrop-blur-sm p-8 transition-all group-hover:scale-[1.01]">
-                    <div className="h-16 flex items-center">
+                      <div className="h-16 flex items-center bg-white rounded-lg p-4 w-full">
                         <Image
                           src={`${sponsor.logo}`}
                           alt={`${sponsor.name} Logo`}
@@ -156,7 +172,7 @@ export default function Component() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Connect with Us</h2>
-                <p className="max-w-[900px] text-gray-400 md:text-xl">
+                <p className="max-w-[900px] text-gray-300 md:text-xl">
                   Follow us on social media to stay updated with our latest events and discussions
                 </p>
               </div>
@@ -208,11 +224,8 @@ export default function Component() {
         </section>
       </main>
       <footer className="relative px-4 lg:px-6 py-6 flex items-center justify-center border-t border-white/10">
-        <p className="text-xs text-gray-400">
-          © {new Date().getFullYear()} Central Iowa Java Users Group.
-        </p>
+        <p className="text-xs text-gray-300">© {new Date().getFullYear()} Central Iowa Java Users Group.</p>
       </footer>
     </div>
   )
 }
-
