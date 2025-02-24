@@ -171,7 +171,7 @@ export default function Component() {
                   {
                     name: "LinkedIn",
                     icon: FaLinkedin,
-                    url: "https://www.linkedin.com/groups/1857039/",
+                    url: "https://www.linkedin.com/company/cijug/",
                     hoverColor: "group-hover:text-cijug-blue",
                   },
                   {
