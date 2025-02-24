@@ -1,0 +1,195 @@
+import { Calendar, Users, Youtube, Twitter, Linkedin, ExternalLink, Mic2, Mail, Code2 } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+
+export default function Component() {
+  return (
+    <div className="flex flex-col min-h-[100dvh] bg-[#0A0A0A] text-white">
+      <div className="fixed inset-0 bg-[linear-gradient(to_right,#E5682722,transparent_1px),linear-gradient(to_bottom,#2186B122,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none" />
+      <div className="fixed inset-0 bg-[radial-gradient(circle_800px_at_100%_200px,#2186B108,transparent),radial-gradient(circle_800px_at_0%_300px,#E5682708,transparent)] pointer-events-none" />
+      <main className="relative flex-1">
+        <section className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center gap-8 text-center">
+              <div className="relative">
+                <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-cijug-orange to-cijug-blue opacity-75 blur" />
+                <div className="relative bg-black rounded-xl p-4">
+                  <Image
+                    src="/logos/cijug.png"
+                    alt="CIJUG Logo"
+                    width={300}
+                    height={120}
+                    className="w-auto h-24 md:h-32 lg:h-40"
+                    priority
+                  />
+                </div>
+              </div>
+              <div className="space-y-4">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
+                  Central Iowa Java Users Group
+                </h1>
+                <p className="max-w-[900px] text-gray-400 md:text-xl/relaxed lg:text-2xl/relaxed">
+                  Expand Your Java Expertise with CIJUG. Whether you're just starting or an experienced developer, our community is here to help you connect, learn, and thrive.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-4 justify-center">
+                <Link
+                  href="https://www.meetup.com/central-iowa-java-users-group/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-10 items-center justify-center rounded-md bg-cijug-orange/90 px-8 text-sm font-medium text-white shadow-lg shadow-cijug-orange/20 backdrop-blur-sm transition-all hover:bg-cijug-orange hover:scale-105"
+                >
+                  Join Our Meetup
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </Link>
+                <Link
+                  href="https://sessionize.com/central-iowa-java-users-group"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-10 items-center justify-center rounded-md bg-cijug-blue/90 px-8 text-sm font-medium text-white shadow-lg shadow-cijug-blue/20 backdrop-blur-sm transition-all hover:bg-cijug-blue hover:scale-105"
+                >
+                  Submit a Talk
+                  <Mic2 className="ml-2 h-4 w-4" />
+                </Link>
+                <Link
+                  href="mailto:boardmembers@cijug.net"
+                  className="inline-flex h-10 items-center justify-center rounded-md border border-white/10 bg-white/5 px-8 text-sm font-medium backdrop-blur-sm transition-all hover:bg-white/10 hover:scale-105"
+                >
+                  Contact Us
+                  <Mail className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6">
+            <div className="grid gap-10 px-10 md:gap-16 lg:grid-cols-2">
+              <div className="relative space-y-4">
+                <div className="absolute -inset-4 rounded-xl bg-gradient-to-r from-cijug-blue to-cijug-orange opacity-10 blur-xl" />
+                <div className="relative">
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">About CIJUG</h2>
+                  <p className="mt-4 text-gray-400 md:text-xl">
+                    At CIJUG, we’re more than a meetup—we’re a thriving network of Java and software engineering enthusiasts. We explore new technologies, share real-world insights, and support continuous learning. Whether you're just starting or an expert in the field, CIJUG is the place to connect, grow, and share your passion!
+                  </p>
+                </div>
+              </div>
+              <div className="grid gap-4">
+                <div className="group relative">
+                  <div className="absolute -inset-0.5 rounded-lg bg-gradient-to-r from-cijug-orange to-cijug-orange/50 opacity-50 blur transition-all group-hover:opacity-75" />
+                  <div className="relative flex items-start gap-4 rounded-lg border border-white/10 bg-black p-4">
+                    <Calendar className="h-6 w-6 mt-1 text-cijug-orange" />
+                    <div>
+                      <h3 className="font-bold text-white">Regular Meetups</h3>
+                      <p className="text-gray-400">Monthly gatherings with expert presentations and discussions</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="group relative">
+                  <div className="absolute -inset-0.5 rounded-lg bg-gradient-to-r from-cijug-blue to-cijug-blue/50 opacity-50 blur transition-all group-hover:opacity-75" />
+                  <div className="relative flex items-start gap-4 rounded-lg border border-white/10 bg-black p-4">
+                    <Users className="h-6 w-6 mt-1 text-cijug-blue" />
+                    <div>
+                      <h3 className="font-bold text-white">Community Driven</h3>
+                      <p className="text-gray-400">Connect with local developers and industry professionals</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="group relative">
+                  <div className="absolute -inset-0.5 rounded-lg bg-gradient-to-r from-cijug-orange to-cijug-blue opacity-50 blur transition-all group-hover:opacity-75" />
+                  <div className="relative flex items-start gap-4 rounded-lg border border-white/10 bg-black p-4">
+                    <Code2 className="h-6 w-6 mt-1 text-white" />
+                    <div>
+                      <h3 className="font-bold text-white">Tech Focus</h3>
+                      <p className="text-gray-400">Deep dives into Java, JVM, and broader tech ecosystem</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-8 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Our Sponsors</h2>
+                <p className="max-w-[900px] text-gray-400 md:text-xl">
+                  Thank you to our amazing sponsors who help make our community possible
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-center">
+                {[
+                  { name: "Source Allies", url: "https://www.sourceallies.com/", logo: "/logos/source-allies.png?height=64&width=200" },
+                  { name: "No Fluff Just Stuff", url: "https://nofluffjuststuff.com/", logo: "/logos/nfjs.png?height=64&width=200" },
+                  { name: "JetBrains", url: "https://www.jetbrains.com/", logo: "https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains.png?height=64&width=200" },
+                ].map((sponsor) => (
+                  <Link
+                    key={sponsor.name}
+                    href={sponsor.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative"
+                  >
+                    <div className="absolute -inset-0.5 rounded-lg bg-gradient-to-r from-cijug-orange to-cijug-blue opacity-50 blur transition-all group-hover:opacity-75" />
+                    <div className="relative flex flex-col items-center gap-4 rounded-lg border border-white/10 bg-gradient-to-b from-white to-gray-100 p-6 transition-all">
+                      <div className="h-16 flex items-center">
+                        <Image
+                          src={`${sponsor.logo}`}
+                          alt={`${sponsor.name} Logo`}
+                          width={200}
+                          height={64}
+                          className="h-16 w-auto object-contain transition-transform group-hover:scale-105"
+                        />
+                      </div>
+                      <span className="font-semibold text-lg text-black">{sponsor.name}</span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Connect with Us</h2>
+                <p className="max-w-[900px] text-gray-400 md:text-xl">
+                  Follow us for speaker announcements, event updates, and community discussions.
+                </p>
+              </div>
+              <div className="flex flex-wrap justify-center gap-4">
+                {[
+                  { name: "X/Twitter", icon: Twitter, url: "https://twitter.com/cijug" },
+                  { name: "LinkedIn", icon: Linkedin, url: "https://www.linkedin.com/company/cijug/" },
+                  { name: "YouTube", icon: Youtube, url: "https://www.youtube.com/@CIJUG" },
+                ].map((social) => (
+                  <Link
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative"
+                  >
+                    <div className="absolute -inset-0.5 rounded-md bg-gradient-to-r from-cijug-orange to-cijug-blue opacity-50 blur transition-all group-hover:opacity-75" />
+                    <div className="relative inline-flex h-10 items-center justify-center rounded-md border border-white/10 bg-black px-8 text-sm font-medium transition-all group-hover:bg-black/50">
+                      <social.icon className="mr-2 h-4 w-4" />
+                      {social.name}
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer className="relative px-4 lg:px-6 py-6 flex items-center justify-center border-t border-white/10">
+        <p className="text-xs text-gray-400">
+          © {new Date().getFullYear()} Central Iowa Java Users Group.
+        </p>
+      </footer>
+    </div>
+  )
+}
+
